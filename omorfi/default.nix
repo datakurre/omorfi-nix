@@ -1,6 +1,5 @@
 { pkgs ? import (builtins.fetchTarball  # revision for reproducible builds
   "https://github.com/nixos/nixpkgs-channels/archive/nixos-16.09.tar.gz") {}
-, pythonPackages ? pkgs.python3Packages
 , hfst ? import ../hfst { pkgs = pkgs; }
 , hfst_ospell ? import ../hfst-ospell { pkgs = pkgs; }
 , pyhfst ? import ../pyhfst { pkgs = pkgs; }
@@ -40,18 +39,21 @@ stdenv.mkDerivation rec {
     ./autogen.sh
   '';
 
+  configureFlags = [
+   "--enable-segmenter"
+   "--enable-lemmatiser"
+   "--enable-hyphenator"
+  ];
+
   buildInputs = with self; [
     autoconf
     automake
+    hfst
     hfst_ospell
     libtool
     python3_hfst
     time
     vislcg3
     zip
-  ];
-
-  propagatedBuildInputs = [
-    hfst
-  ];
+ ];
 }

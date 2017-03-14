@@ -8,4 +8,5 @@ in
 
 python3.buildEnv.override {
   extraLibs = with self; [ pyomorfi ];
+  ignoreCollision = true;
 }
