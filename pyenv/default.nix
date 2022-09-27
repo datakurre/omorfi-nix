@@ -1,4 +1,4 @@
-with import <nixpkgs> {};
+with import ../nix {};
 
 let self = {
   pyomorfi = import ../pyomorfi { pkgs = pkgs; };

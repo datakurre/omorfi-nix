@@ -1,0 +1,14 @@
+{
+    "nixpkgs-17.03": {
+        "branch": "release-17.03",
+        "description": "Nix Packages collection",
+        "homepage": "",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "2c1838ab99b086dccad930e8dcc504b867149a0c",
+        "sha256": "0lz9gmb97y6cvjj5pbz89cx97c6d49v5nmfwh8sbmgfmqy8cfwxp",
+        "type": "tarball",
+        "url": "https://github.com/NixOS/nixpkgs/archive/2c1838ab99b086dccad930e8dcc504b867149a0c.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    }
+}
